@@ -1,0 +1,14 @@
+<div class="todos">
+
+  <div class="todoForm">
+    <mat-form-field>
+      <input matInput type="text" [(ngModel)]="newTodo">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="addTodo()">Add</button>
+  </div>
+
+  <mat-selection-list #todolist class="my-list">
+    <h3 mat-subheader>To-Do List</h3>
+    <mat-list-option *ngFor="let todo of todos">{{todo}}</mat-list-option>
+  </mat-selection-list>
+</div>
