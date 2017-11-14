@@ -10,11 +10,9 @@ export class TodoListComponent implements OnInit {
 
   todos: string[]
   newTodo: string
-  service: TodosService
 
-  constructor(service: TodosService) {
+  constructor(private service: TodosService) {
     this.todos = []
-    this.service = service
   }
 
   ngOnInit() {
